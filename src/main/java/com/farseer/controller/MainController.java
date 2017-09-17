@@ -12,8 +12,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class MainController {
 
     @ResponseBody
-    @RequestMapping(value = "/test.do",method = RequestMethod.GET)
+    @RequestMapping(value = "/test.do", method = RequestMethod.GET)
     public String index() {
         return "index";
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/getname", method = RequestMethod.GET)
+    public String getName(String params) {
+        return "Hello names";
     }
 }
